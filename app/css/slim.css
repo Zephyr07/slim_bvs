@@ -1,0 +1,25 @@
+/* app css stylesheet */
+
+body{
+  background: white;
+}
+
+.logo{
+  padding: 0 15px;
+}
+
+.logo img{
+  width: 35%;
+}
+
+.btn{
+  text-transform: none !important;
+}
+
+.btn-line{
+  margin-bottom: 30px;
+}
+
+.image_logo{
+  
+}
