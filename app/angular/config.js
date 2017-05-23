@@ -11,15 +11,18 @@ config.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$ur
             title:"accueil",
             views:{
                 '':{
-                    templateUrl: template_url + 'index.html'
+                    templateUrl: template_url + 'index.html',
+                    controller:'AccueilCtrl'
                 },
                 'header@accueil': {
                     templateUrl: template_url + 'static/header.html',
                     controller: "HeaderCtrl"
                 },
                 'body@accueil': {
-                    templateUrl: template_url+'accueil/content.html',
-                    controller:'AccueilCtrl'
+                    templateUrl: template_url+'accueil/content.html'
+                },
+                'modal@accueil': {
+                    templateUrl: template_url+'static/modal.html'
                 },
                 'footer@accueil': {
                     templateUrl: template_url+'static/footer.html',

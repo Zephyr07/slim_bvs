@@ -12,7 +12,9 @@ angular.module('slim', [
     'ui.router',
     'slim.config',
     'slim.controller',
-    'slim.service'
+    'slim.service',
+    'ui.bootstrap.datetimepicker'
 ]);
 
 $.material.init();
+moment.locale("fr");
