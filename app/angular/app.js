@@ -13,6 +13,8 @@ angular.module('slim', [
     'slim.config',
     'slim.controller',
     'slim.service',
+    'ngCookies',
+    'restangular',
     'ui.bootstrap.datetimepicker'
 ]);
 

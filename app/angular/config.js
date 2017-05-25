@@ -30,4 +30,28 @@ config.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$ur
                 }
             }
         })
+        .state('commande',{
+            url:"/commande/:mode",
+            title:"commande",
+            views:{
+                '':{
+                    templateUrl: template_url + 'index.html',
+                    controller:'CommandeCtrl'
+                },
+                'header@commande': {
+                    templateUrl: template_url + 'static/header.html',
+                    controller: "HeaderCtrl"
+                },
+                'body@commande': {
+                    templateUrl: template_url+'command/commande.html'
+                },
+                'modal@commande': {
+                    templateUrl: template_url+'static/modal.html'
+                },
+                'footer@commande': {
+                    templateUrl: template_url+'static/footer.html',
+                    controller:"FooterCtrl"
+                }
+            }
+        })
 }]);

@@ -18,6 +18,23 @@ controller
         };
     }])
 
+    .controller("CommandeCtrl",['$scope','$stateParams','$state',function($scope,$stateParams,$state){
+        $scope.current=new Date();
+
+        $scope.commande=[];
+        var mode=$stateParams.mode;
+
+        $scope.detail_produit=function(produit){
+            $scope.produit=produit;
+            $("#btn_detail_produit").trigger("click");
+        };
+
+        $scope.memoriser_commande=function(){
+            $state.go("accueil");
+        }
+
+    }])
+
     .controller("AccueilCtrl",['$scope',function($scope){
         $scope.current=new Date();
         $scope.statutAuth=true;

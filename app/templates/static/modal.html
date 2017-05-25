@@ -20,8 +20,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default btn-raised" id="closeAuthentification" data-dismiss="modal">Fermer</button>
-                <button type="button" class="btn btn-default btn-raised btn-primary" ng-click="authentification(code)">Connexion</button>
+                <button type="button" class="btn btn-raised" id="closeAuthentification" data-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-raised btn-primary" ng-click="authentification(code)">Connexion</button>
             </div>
         </div>
         <div class="modal-content" ng-if="!statutAuth">
@@ -47,6 +47,82 @@
             <div class="modal-footer hide">
                 <button type="button" class="btn btn-default btn-raised" data-dismiss="modal">Annuler</button>
                 <button type="button" class="btn btn-default btn-raised btn-primary" ng-click="authentification(code)">Ouvrir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button id="btn_detail_produit" data-toggle="modal" data-target="#detail_produit" class="hide"></button>
+
+<div class="modal" id="detail_produit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Very pamplemousse</h4>
+            </div>
+            <div class="modal-body">
+                <fieldset>
+                    <legend>Actions</legend>
+                    <div class="row-fluid">
+                        <div class="col-md-3">Quantité</div>
+                        <div class="col-md-8">
+                            <input type="number" class="form-control" ng-model="produit.quantite" min="1" max="{{produit.quantite_stock}}">
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="col-md-3">Remise</div>
+                        <div class="col-md-8">
+                            <input type="number" class="form-control" ng-model="produit.remise" min="1" max="10" step="1">
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="col-md-3">Offrir</div>
+                        <div class="col-md-8">
+                            <input type="password" class="form-control" placeholder="Mot de passe">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="modal-footer" style="text-align: center">
+                <button type="button" class="btn btn-raised btn-danger">Supprimer</button>
+                <button type="button" class="btn btn-raised" id="close_detail_produit" data-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-raised btn-primary" ng-click="authentification(code)">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="ajouter_client">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Selectionner le client</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-5 pull-right">
+                        <form class="navbar-form">
+                            <div class="form-group">
+                                <input class="form-control col-md-8" placeholder="Rechercher un client" type="text">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4" ng-repeat="n in ['edward','nanda','zjdbqkdbqksdkqj sdkqjsndkqjsndkqjsnd',4,5,56]">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                {{n | limitTo:32}}
+                                <br>
+                                <span class="pull-right md-text text-primary">CHR en compte 10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-raised btn-danger" data-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-raised btn-primary" ng-click="ajouter_client(code)">Ajouter</button>
             </div>
         </div>
     </div>
